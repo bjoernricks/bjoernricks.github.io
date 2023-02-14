@@ -41,8 +41,8 @@ ${template_hooks['extra_head']()}
       </div>
       <div class="nav-right">
         <nav class="nav-item level is-mobile">
-          % for link, icon in navigation_links[lang]:
-          <a class="level-item" href="${link}">
+          % for link, icon, title in navigation_links[lang]:
+          <a class="level-item" href="${link}" title="${title}">
             <span class="icon">
               <i class="${icon}"></i>
             </span>
