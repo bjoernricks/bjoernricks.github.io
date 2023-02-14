@@ -6,7 +6,6 @@
 <%inherit file="post.tmpl"/>
 
 <%block name="content">
-    <h2 class="subtitle is-6">${post.formatted_date(date_format)|h}</h2>
     <h1 class="title">${post.title()|h}</h1>
     <div class="content">
     ${post.text()}
