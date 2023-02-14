@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "bjoernricks-github-io"
+version = "1.0.0"
+description = ""
+authors = ["Björn Ricks <bjoern.ricks@gmail.com>"]
+readme = "README.md"
+packages = [{include = "bjoernricks"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+nikola = "^8.2.3"
+
+[tool.poetry.group.dev.dependencies]
+autohooks-plugin-black = "^22.11.0"
+autohooks-plugin-pylint = "^22.8.1"
+autohooks-plugin-isort = "^22.8.0"
+aiohttp = "^3.8.3"
+watchdog = "^2.2.1"
+ruamel-yaml = "^0.17.21"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
