@@ -27,7 +27,17 @@ ${template_hooks['extra_head']()}
   <div class="container">
     <nav class="nav">
       <div class="nav-left">
-        <a class="nav-item" href="${blog_url}"><h1 class="title is-4">${blog_title}</h1></a>
+        <h1 class="nav-item title is-4">
+          <a href="${_link("root", None, lang)}" rel="home">
+            %if logo_url:
+                <img src="${logo_url}" alt="${blog_title|h}" id="logo">
+            %endif
+
+            % if show_blog_title:
+                <span id="blog-title">${blog_title|h}</span>
+            % endif
+          </a>
+        </h1>
       </div>
       <div class="nav-right">
         <nav class="nav-item level is-mobile">
