@@ -142,18 +142,11 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archives"),
-        ("/categories/index.html", "Tags"),
-        ("/rss.xml", "RSS feed"),
-    ),
-}
-
-NAVIGATION_LINKS = {
-    DEFAULT_LANG: (
-        ("https://norden.social/@bjoernricks", "fa fa-mastodon"),
-        ("http://twitter.com/bjoernricks", "fa fa-twitter"),
-        ("http://github.com/bjoernricks", "fa fa-github"),
-        ("/rss.xml", "fa fa-rss"),
+        ("/pages/about/", "fa fa-user", "About Me"),
+        ("https://norden.social/@bjoernricks", "fa fa-mastodon", "Mastodon"),
+        ("http://twitter.com/bjoernricks", "fa fa-twitter", "Twitter"),
+        ("http://github.com/bjoernricks", "fa fa-github", "GitHub"),
+        ("/rss.xml", "fa fa-rss", "RSS Feed"),
     ),
 }
 
