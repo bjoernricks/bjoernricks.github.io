@@ -23,9 +23,11 @@
 % endif
 % for post in posts:
 
-    <article>
-      <h2 class="subtitle is-6">${post.formatted_date(date_format)|h}</h2>
-      <h1 class="title"><a href="${post.permalink()}">${post.title()|h}</a></h1>
+    <article class="post-${post.meta('type')}">
+      <div class="subtitle is-6">
+      <time class="published dt-published subtitle is-6" datetime="${post.formatted_date('webiso')}" itemprop="datePublished" title="${post.formatted_date(date_format)|h}">${post.formatted_date(date_format)|h}</time>
+      </div>
+      <h1 class="title"><a href="${post.permalink()}" rel="bookmark">${post.title()|h}</a></h1>
       <div class="content">
     %if index_teasers:
     ${post.text(teaser_only=True)}
