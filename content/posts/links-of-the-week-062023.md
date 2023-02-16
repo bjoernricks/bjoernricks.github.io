@@ -20,6 +20,8 @@ Curated list of links for calendar week 06/2023
 
 * [https://github.blog/changelog/2023-02-08-pull-request-merge-queue-public-beta/](https://github.blog/changelog/2023-02-08-pull-request-merge-queue-public-beta/) - Pull request merge queue (public beta)
 
+<!-- TEASER_END -->
+
 # React
 
 * [https://martinfowler.com/articles/modularizing-react-apps.html](https://martinfowler.com/articles/modularizing-react-apps.html) - Modularizing React Applications with Established UI Patterns
