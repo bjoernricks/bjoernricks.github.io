@@ -1,0 +1,24 @@
+---
+category: links-of-the-week
+date: 2023-02-22 07:18:04 UTC
+description: 'Curated list of links for calendar week 08/2023'
+link: ''
+slug: links-of-the-week-230208
+tags: links,links-of-the-week
+title: Links of the Week (08/2023)
+type: text
+status: text
+---
+
+Curated list of links for calendar week 08/2023
+
+# Python
+* [https://pythonspeed.com/articles/faster-python-json-parsing/](https://pythonspeed.com/articles/faster-python-json-parsing/) - Faster, more memory-efficient Python JSON parsing with msgspec
+* [https://fly.io/blog/standout-features-in-django-4-2/](https://fly.io/blog/standout-features-in-django-4-2/) - Standout Features in Django 4.2 - Features of the upcoming Django 4.2 release
+* [https://pyfound.blogspot.com/2023/02/python-packaging-strategy-discussion.html](https://pyfound.blogspot.com/2023/02/python-packaging-strategy-discussion.html) - Python Packaging Strategy Discussion Summary - Part 1
+
+# Other
+
+* [https://www.wired.com/story/god-did-us-a-favor-by-destroying-twitter/](https://www.wired.com/story/god-did-us-a-favor-by-destroying-twitter/) - God Did the World a Favor by Destroying Twitter
+* [https://www.ufried.com/blog/continuous_amnesia_issue/](https://www.ufried.com/blog/continuous_amnesia_issue/) - The continuous amnesia issue - As an industry we continuously forget what we have learned
+* [https://www.techfinitive.com/features/confessions-of-a-sysadmin-why-honesty-is-the-best-policy/](https://www.techfinitive.com/features/confessions-of-a-sysadmin-why-honesty-is-the-best-policy/) - Confessions of a sysadmin: why honesty is the best policy - A blog article of my former co-worker David Wright
