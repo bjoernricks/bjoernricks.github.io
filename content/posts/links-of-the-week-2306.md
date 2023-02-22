@@ -3,7 +3,7 @@ category: links-of-the-week
 date: 2023-02-10 14:27:41 UTC
 description: 'Curated list of links for calendar week 06/2023'
 link: ''
-slug: links-of-the-week-230206
+slug: links-of-the-week-2306
 tags: links,links-of-the-week,python,react
 title: Links of the Week (06/2023)
 type: text

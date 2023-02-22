@@ -3,7 +3,7 @@ category: links-of-the-week
 date: 2023-02-22 07:18:04 UTC
 description: 'Curated list of links for calendar week 08/2023'
 link: ''
-slug: links-of-the-week-230208
+slug: links-of-the-week-2308
 tags: links,links-of-the-week,python
 title: Links of the Week (08/2023)
 type: text
