@@ -656,7 +656,12 @@ ATOM_FILENAME_BASE = "feed"
 # relative URL.
 #
 # If you don't need any of these, just set to []
-REDIRECTIONS = []
+REDIRECTIONS = [
+    ("posts/links-of-the-week-2308/", "/posts/links-of-the-week/2308/"),
+    ("posts/links-of-the-week-2306/", "/posts/links-of-the-week/2306/"),
+    ("posts/til-230207/", "/posts/til/230207/"),
+    ("posts/til-230221/", "/posts/til/230221/"),
+]
 
 # Presets of commands to execute to deploy. Can be anything, for
 # example, you may use rsync:
