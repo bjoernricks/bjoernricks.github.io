@@ -8,7 +8,7 @@ packages = [{include = "bjoernricks"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-nikola = "^8.2.3"
+nikola = "^8.2.4"
 
 [tool.poetry.group.dev.dependencies]
 autohooks-plugin-black = "^23.4.0"
