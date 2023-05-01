@@ -1161,14 +1161,14 @@ icu = ["PyICU (>=1.0.0)"]
 
 [[package]]
 name = "nikola"
-version = "8.2.3"
+version = "8.2.4"
 description = "A modular, fast, simple, static website and blog generator"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "Nikola-8.2.3-py3-none-any.whl", hash = "sha256:61b9a7ef334aa977e75085061fdf4f9f5043d6e5a453e339dd3edf9c75f44bfa"},
-    {file = "Nikola-8.2.3.tar.gz", hash = "sha256:73c79a764998592f3c9c6c22e90c0fa8783b1415e591d6b3292adb583330fd40"},
+    {file = "Nikola-8.2.4-py3-none-any.whl", hash = "sha256:941436fd2a15fb3982963199fad1b63913236b4fd4b8220162c112194fced03b"},
+    {file = "Nikola-8.2.4.tar.gz", hash = "sha256:2cd564db37cdc18e020b8aae96a7cd5f08b7996c85c7358878cca487a80538bf"},
 ]
 
 [package.dependencies]
@@ -1903,4 +1903,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "61929a4cb0097ef98892a9bcab2299c2257d4a1f03b9f7fddd6863f99ff8c6a0"
+content-hash = "c45b27c6722637827cb1341477ec76ef993ec45f6d0558650a672f66f6944822"
