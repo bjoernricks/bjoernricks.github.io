@@ -144,7 +144,6 @@ NAVIGATION_LINKS = {
     DEFAULT_LANG: (
         ("/pages/about/", "fa fa-user", "About Me"),
         ("https://norden.social/@bjoernricks", "fa fa-mastodon", "Mastodon"),
-        ("http://twitter.com/bjoernricks", "fa fa-twitter", "Twitter"),
         ("http://github.com/bjoernricks", "fa fa-github", "GitHub"),
         ("/rss.xml", "fa fa-rss", "RSS Feed"),
     ),
