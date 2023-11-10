@@ -4,7 +4,7 @@ version = "1.0.0"
 description = ""
 authors = ["Björn Ricks <bjoern.ricks@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "bjoernricks" }]
+packages = []
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -12,11 +12,38 @@ nikola = ">=8.2.3"
 
 [tool.poetry.group.dev.dependencies]
 autohooks-plugin-black = ">=22.11.0"
-autohooks-plugin-pylint = ">=22.8.1"
-autohooks-plugin-isort = ">=22.8.0"
+autohooks-plugin-ruff = ">=22.10.0"
 aiohttp = ">=3.8.3"
 watchdog = ">=2.3.1"
 ruamel-yaml = ">=0.17.21"
+
+[tool.poetry.scripts]
+
+[tool.ruff]
+line-length = 80
+target-version = "py311"
+extend-select = ["I", "PLE", "PLW"]
+
+[tool.black]
+line-length = 80
+target-version = ["py311"]
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | \.github
+  | \.vscode
+  | _build
+  | build
+  | dist
+  | docs
+)/
+'''
+
+
+[tool.autohooks]
+pre-commit = ["autohooks.plugins.black", "autohooks.plugins.ruff"]
+mode = "poetry"
 
 [build-system]
 requires = ["poetry-core"]
