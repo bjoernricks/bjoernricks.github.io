@@ -186,6 +186,7 @@ THEME_CONFIG = {
         "featured_strip_html": False,
         # Contents of the sidebar, If empty, the sidebar is not displayed.
         "sidebar": "",
+        "markdown.extensions.toc": {"toc_depth": 2},
     }
 }
 # Config for bootstrap4:
@@ -1132,6 +1133,7 @@ MARKDOWN_EXTENSIONS = [
     "markdown.extensions.codehilite",
     "markdown.extensions.extra",
     "markdown.extensions.meta",
+    "markdown.extensions.toc",
 ]
 
 # Options to be passed to markdown extensions (See https://python-markdown.github.io/reference/)
