@@ -7,6 +7,7 @@ slug: what-s-new-in-python
 tags: python,news,features
 title: What's new in Python 3
 type: text
+updated: 2023-11-14 13:00:00 UTC
 ---
 Quick overview about the most important additions in a Python release
 
@@ -34,6 +35,42 @@ _T_co = TypeVar("_T_co", covariant=True, bound=str)
 class ClassA(Generic[_T_co]):
     def method1(self) -> _T_co:
 ```
+
+* [@override decorator](https://docs.python.org/3/library/typing.html#typing.override)
+
+```python
+class Base:
+    def log_status(self) -> None:
+        ...
+
+class Sub(Base):
+    @override
+    def log_status(self) -> None:  # Okay: overrides Base.log_status
+        ...
+
+    @override
+    def done(self) -> None:  # Error reported by type checker
+```
+
+## f-strings
+
+f-strings have been formalized. Before Python 3.12 there was an extra separated
+parser just for evaluating the f-strings. With Python 3.12 parsing f-strings has
+been integrated and the PEG parser (introduced with Python 3.9).
+
+This comes with great improvements like being able to use quotes within quotes
+and f-strings within f-strings.
+
+Examples:
+
+```python
+f"Python {version["major"]}.{version["minor"]}"
+f"Names: {"\n ".join(["John", "Paul", "Marie"])}"
+```
+
+## Pathlib
+
+* [Path.walk](https://docs.python.org/3/library/pathlib.html#pathlib.Path.walk)
 
 # Python 3.11
 
