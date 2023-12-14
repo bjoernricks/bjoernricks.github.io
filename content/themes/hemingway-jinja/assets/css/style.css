@@ -7025,8 +7025,14 @@ code {
     font-size: 90%
 }
 
-article+article {
-    margin-top: 80px
+article:first-of-type {
+    margin-top: 0;
+}
+
+article {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 12px 0;
+    margin: 30px 0;
 }
 
 .content h1,
