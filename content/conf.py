@@ -492,12 +492,13 @@ CATEGORY_OUTPUT_FLAT_HIERARCHY = False
 
 # Set special titles for category pages. The default is "Posts about CATEGORY".
 # (translatable)
-# CATEGORY_TITLES = {
-#    DEFAULT_LANG: {
-#        "blogging": "Meta-posts about blogging",
-#        "open source": "Posts about open source software"
-#    },
-# }
+CATEGORY_TITLES = {
+    DEFAULT_LANG: {
+        "links-of-the-week": "Curated lists of links to interesting articles and news",
+        "python": "Posts about Python",
+        "til": "Today I learned",
+    },
+}
 
 # If you do not want to display a category publicly, you can mark it as hidden.
 # The category will not be displayed on the category list page.
