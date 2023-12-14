@@ -664,6 +664,7 @@ REDIRECTIONS = [
     ("posts/links-of-the-week-2306/", "/posts/links-of-the-week/2306/"),
     ("posts/til-230207/", "/posts/til/230207/"),
     ("posts/til-230221/", "/posts/til/230221/"),
+    ("posts/what-s-new-in-python/", "posts/python/what-s-new-in-python/"),
 ]
 
 # Presets of commands to execute to deploy. Can be anything, for
