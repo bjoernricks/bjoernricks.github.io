@@ -1,0 +1,7 @@
+[Theme]
+engine = jinja
+parent = base-jinja
+author = Roberto Alsina, tanksuzuki
+author_url = http://ralsina.me/
+based_on = Hemingway for Hugo <https://themes.gohugo.io/hemingway/>
+license = MIT

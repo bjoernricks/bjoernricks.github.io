@@ -1,0 +1,42 @@
+{% import 'index_helper.tmpl' as helper with context %}
+{% import 'math_helper.tmpl' as math with context %}
+{% import 'comments_helper.tmpl' as comments with context %}
+{% import 'pagination_helper.tmpl' as pagination with context %}
+{% extends 'base.tmpl' %}
+
+{% block extra_head %}
+    {{ super() }}
+    {% if posts and (permalink == '/' or permalink == '/' + index_file) %}
+        <link rel="prefetch" href="{{ posts[0].permalink() }}" type="text/html">
+    {% endif %}
+    {{ math.math_styles_ifposts(posts) }}
+{% endblock %}
+
+{% block content %}
+{% block content_header %}
+{% endblock %}
+{% if 'main_index' in pagekind %}
+    {{ front_index_header }}
+{% endif %}
+{% if page_links %}
+    {{ pagination.page_navigation(current_page, page_links, prevlink, nextlink, prev_next_links_reversed) }}
+{% endif %}
+{% for post in posts %}
+    <article class="post-{{ post.meta('type') }}">
+      <div class="subtitle is-6">
+      <time class="published dt-published subtitle is-6" datetime="{{ post.formatted_date('webiso') }}" itemprop="datePublished" title="{{ post.formatted_date(date_format)|e }}">{{ post.formatted_date(date_format)|e }}</time>
+      </div>
+      <h1 class="title"><a href="{{ post.permalink() }}" rel="bookmark">{{ post.title()|e }}</a></h1>
+      <div class="content">
+    {% if index_teasers %}
+    {{ post.text(teaser_only=True) }}
+    {% else %}
+    {{ post.text(teaser_only=False) }}
+    {% endif %}
+      </div>
+    </article>
+{% endfor %}
+
+{{ helper.html_pager() }}
+{{ math.math_scripts_ifposts(posts) }}
+{% endblock %}

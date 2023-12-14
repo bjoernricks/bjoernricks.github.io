@@ -156,7 +156,8 @@ NAVIGATION_ALT_LINKS = {DEFAULT_LANG: ()}
 
 # Name of the theme to use.
 # THEME = "bootblog4"
-THEME = "hemingway"
+# THEME = "hemingway"
+THEME = "hemingway-jinja"
 
 # A theme color. In default themes, it might be displayed by some browsers as
 # the browser UI color (eg. Chrome on Android). Other themes might also use it

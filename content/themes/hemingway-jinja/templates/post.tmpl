@@ -1,0 +1,67 @@
+{% import 'post_helper.tmpl' as helper with context %}
+{% import 'post_header.tmpl' as pheader with context %}
+{% import 'comments_helper.tmpl' as comments with context %}
+{% import 'math_helper.tmpl' as math with context %}
+{% extends 'base.tmpl' %}
+
+{% block extra_head %}
+    {{ super() }}
+    {% if post.meta('keywords') %}
+    <meta name="keywords" content="{{ smartjoin(', ', post.meta('keywords'))|e }}">
+    {% endif %}
+    <meta name="author" content="{{ post.author()|e }}">
+    {% if post.prev_post %}
+        <link rel="prev" href="{{ post.prev_post.permalink() }}" title="{{ post.prev_post.title()|e }}" type="text/html">
+    {% endif %}
+    {% if post.next_post %}
+        <link rel="next" href="{{ post.next_post.permalink() }}" title="{{ post.next_post.title()|e }}" type="text/html">
+    {% endif %}
+    {% if post.is_draft %}
+        <meta name="robots" content="noindex">
+    {% endif %}
+    {{ helper.open_graph_metadata(post) }}
+    {{ helper.twitter_card_information(post) }}
+    {{ helper.meta_translations(post) }}
+    {{ math.math_styles_ifpost(post) }}
+{% endblock %}
+
+{% block content %}
+    {% if post.tags %}
+    <div class="subtitle tags is-6 is-pulled-right">
+        {% for i, tag in enumerate(post.tags) %}
+            {% if tag not in hidden_tags %}
+            {% if i > 0 %}
+            |
+            {% endif %}
+            <a class="subtitle is-6" href="{{ _link('tag', tag) }}">#{{ tag|e }}</a>
+            {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="subtitle is-6">
+      <time class="published dt-published subtitle is-6" datetime="{{ post.formatted_date('webiso') }}" itemprop="datePublished" title="{{ post.formatted_date(date_format)|e }}">{{ post.formatted_date(date_format)|e }}</time>
+    </div>
+    <h1 class="title">{{ post.title()|e }}</h1>
+    {% if post.updated and post.updated != post.date %}
+    <div class="subtitle is-6">
+        <span class="updated"> ({{ messages("updated") }}
+            <time class="dt-updated" datetime="{{ post.formatted_updated('webiso') }}" itemprop="dateUpdated" title="{{ post.formatted_updated(date_format)|e }}">{{ post.formatted_updated(date_format)|e }}</time>)</span>
+    </div>
+    {% endif %}
+    <div class="content">
+    {{ post.text() }}
+    </div>
+    </div>
+</section>
+    {% if not post.meta('nocomments') and site_has_comments %}
+        <section class="section comments hidden-print">
+        <div class="container">
+        <h2>{{ messages("Comments") }}</h2>
+        {{ comments.comment_form(post.permalink(absolute=True), post.title(), post._base_path) }}
+        </div>
+        </section>
+    {% endif %}
+    {{ math.math_scripts_ifpost(post) }}
+{{ comments.comment_link_script() }}
+{% endblock %}
