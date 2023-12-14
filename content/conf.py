@@ -146,6 +146,7 @@ NAVIGATION_LINKS = {
         ("https://norden.social/@bjoernricks", "fa fa-mastodon", "Mastodon"),
         ("http://github.com/bjoernricks", "fa fa-github", "GitHub"),
         ("/rss.xml", "fa fa-rss", "RSS Feed"),
+        ("/categories/", "fa fa-tags", "Tags"),
     ),
 }
 
