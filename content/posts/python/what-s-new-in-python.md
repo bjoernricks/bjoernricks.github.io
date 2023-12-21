@@ -1,13 +1,13 @@
 ---
-category: 'python'
+category: python
 date: 2023-11-10 09:58:50 UTC
-description: 'Quick overview about the most important additions in a Python release'
+description: Quick overview about the most important additions in a Python release
 link: ''
 slug: what-s-new-in-python
 tags: python,news,features
 title: What's new in Python 3
 type: text
-updated: 2023-11-14 13:00:00 UTC
+updated: 2023-12-21 13:00:00 UTC
 ---
 Quick overview about the most important additions in a Python release
 
@@ -71,6 +71,10 @@ f"Names: {"\n ".join(["John", "Paul", "Marie"])}"
 ## Pathlib
 
 * [Path.walk](https://docs.python.org/3/library/pathlib.html#pathlib.Path.walk)
+
+## Itertools
+
+* [itertools.batched](https://docs.python.org/3/library/itertools.html#itertools.batched)
 
 # Python 3.11
 
