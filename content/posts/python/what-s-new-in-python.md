@@ -7,7 +7,7 @@ slug: what-s-new-in-python
 tags: python,news,features
 title: What's new in Python 3
 type: text
-updated: 2023-12-21 13:00:00 UTC
+updated: 2023-12-22 7:00:00 UTC
 ---
 Quick overview about the most important additions in a Python release
 
@@ -87,8 +87,9 @@ f"Names: {"\n ".join(["John", "Paul", "Marie"])}"
 * [`with contextlib.chdir(directory):` ](https://docs.python.org/3/library/contextlib.html#contextlib.chdir)
 
 ## Typing
-*  Self Type [PEP 673](https://peps.python.org/pep-0673/)
-*  [LiteralString](https://docs.python.org/3/library/typing.html#typing.LiteralString) [PEP 675](https://peps.python.org/pep-0675/)
+* Self Type [PEP 673](https://peps.python.org/pep-0673/)
+* [LiteralString](https://docs.python.org/3/library/typing.html#typing.LiteralString) [PEP 675](https://peps.python.org/pep-0675/)
+* [@overload decorator](https://docs.python.org/3/library/typing.html#typing.overload)
 
 ## Enum
 * [StrEnum](https://docs.python.org/3/library/enum.html#enum.StrEnum)
@@ -102,7 +103,7 @@ f"Names: {"\n ".join(["John", "Paul", "Marie"])}"
 [https://docs.python.org/3/whatsnew/3.10.html](https://docs.python.org/3/whatsnew/3.10.html)
 
 ## Features
-* Structural Pattern Matching [PEP 634]()
+* Structural Pattern Matching [PEP 634](https://peps.python.org/pep-0634/)
 
 ## Typing
 * Allow writing union types as `X | Y` [PEP 604](https://peps.python.org/pep-0604/)
@@ -125,6 +126,7 @@ f"Names: {"\n ".join(["John", "Paul", "Marie"])}"
 ## Typing
 * Type Hinting Generics In Standard Collections [PEP 585](https://peps.python.org/pep-0585/)
 	Examples: `list[str]`
+* Flexible function and variable annotations - `Annotated` [PEP 593](https://peps.python.org/pep-0593/)
 
 ## AsyncIO
 * [asyncio.to_thread](https://docs.python.org/3/library/asyncio-task.html#asyncio.to_thread) -> for running IO-bound functions in a separate thread to avoid blocking the event loop
