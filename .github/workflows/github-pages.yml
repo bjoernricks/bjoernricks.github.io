@@ -36,7 +36,7 @@ jobs:
           python -m pip install --upgrade poetry
       - name: Install dependencies
         run: |
-          poetry install --no-root
+          poetry install
       - name: Build
         run: |
           poetry run pelican content -s publishconf.py -t themes/hemingway-jinja -d
