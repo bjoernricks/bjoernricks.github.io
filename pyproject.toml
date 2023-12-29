@@ -4,19 +4,16 @@ version = "1.0.0"
 description = ""
 authors = ["Björn Ricks <bjoern.ricks@gmail.com>"]
 readme = "README.md"
-packages = []
 
 [tool.poetry.dependencies]
 python = "^3.11"
-nikola = ">=8.2.3"
-jinja2 = ">=3.1.2"
+pelican = {extras = ["markdown"], version = ">=4.9.1"}
+markdown-it-py = "^3.0.0"
+mdit-py-plugins = "^0.4.0"
 
 [tool.poetry.group.dev.dependencies]
 autohooks-plugin-black = ">=22.11.0"
 autohooks-plugin-ruff = ">=22.10.0"
-aiohttp = ">=3.8.3"
-watchdog = ">=2.3.1"
-ruamel-yaml = ">=0.17.21"
 
 [tool.poetry.scripts]
 

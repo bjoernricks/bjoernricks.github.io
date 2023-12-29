@@ -5,14 +5,14 @@ date: 2023-02-14 14:40:14 UTC
 tags: about
 category: about
 link:
-description:
+description: Some background about Me
 type: text
 ---
 
 My name is *Björn Ricks*. I am a software developer at [Greenbone] living in the
 north of Germany.
 
-<center><img src="/bricks.jpg" width="300" height="300"/></center>
+<center><img src="/images/bricks.jpg" width="300" height="300"/></center>
 
 # Open Source
 

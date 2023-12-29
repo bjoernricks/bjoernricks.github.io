@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ super() }}
+    {% if article.description %}
+        <meta name="description" content="{{article.description}}" />
+    {% endif %}
+    {% for tag in article.tags %}
+        <meta name="tags" content="{{tag}}" />
+    {% endfor %}
+    <meta name="author" content="{{ article.author }}">
+    {% if article.status == "draft" %}
+        <meta name="robots" content="noindex">
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <article>
+        {% if article.tags %}
+        <div class="subtitle tags is-6 is-pulled-right">
+            {% for i, tag in enumerate(article.tags) %}
+                {% if i > 0 %}
+                |
+                {% endif %}
+                <a class="subtitle is-6" href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="subtitle is-6">
+        <time class="published dt-published subtitle is-6" datetime="{{ article.date.isoformat() }}" itemprop="datePublished" title="{{ article.date }}">{{ article.locale_date }}</time>
+        </div>
+        <h1 class="title">
+            <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a>
+        </h1>
+        {% if article.modified and article.modified != article.date %}
+        <div class="subtitle is-6">
+            <span class="updated"> (Last updated:
+                <time class="dt-updated" datetime="{{ article.modified.isoformat() }}" itemprop="dateUpdated" title="{{ article.updated }}">{{ article.locale_modified }}</time>)</span>
+        </div>
+        {% endif %}
+
+        <div class="content">
+            {{ article.content }}
+        </div>
+    </article>
+{% endblock %}

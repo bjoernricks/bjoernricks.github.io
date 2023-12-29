@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    {{ super() }}
+    <meta name="author" content="{{ page.author }}">
+    {% if page.status == "draft" %}
+        <meta name="robots" content="noindex">
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {{ super() }}
+    <article>
+        {% if page.tags %}
+        <div class="subtitle tags is-6 is-pulled-right">
+            {% for i, tag in enumerate(page.tags) %}
+                {% if tag not in hidden_tags %}
+                {% if i > 0 %}
+                |
+                {% endif %}
+                <a class="subtitle is-6" href="{{ SITEURL }}/{{ tag.url }}">#{{ tag }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="subtitle is-6">
+            <time class="published dt-published subtitle is-6" datetime="{{ page.date.isoformat( )}}" itemprop="datePublished" title="{{ page.locale_date }}">{{ page.locale_date }}</time>
+        </div>
+        <h1 class="title">{{ page.title }}</h1>
+        {% if page.modified and page.modified != page.date %}
+        <div class="subtitle is-6">
+            <span class="updated"> (Last updated:
+                <time class="dt-updated" datetime="{{ page.modified.isoformat() }}" itemprop="dateUpdated" title="{{ page.locale_modified }}">{{ page.locale_modified }}</time>)</span>
+        </div>
+        {% endif %}
+        <div class="content">
+            {{ page.content }}
+        </div>
+    </article>
+{% endblock %}

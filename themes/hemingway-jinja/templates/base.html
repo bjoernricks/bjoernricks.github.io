@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+  <head>
+    {% block head %}
+    <title>{% block title %}{{ SITENAME|striptags }}{% endblock title %}</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Pelican" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="{{ SITEURL }}">
+    <link rel="icon" href="/images/favicon.png" sizes="48x48">
+    {% if SITESUBTITLE %}
+    <meta name="description" content="{{ SITESUBTITLE }}" />
+    {% endif %}
+    {% if STYLESHEET_URL %}
+    <link rel="stylesheet" type="text/css" href="{{ STYLESHEET_URL }}" />
+    {% endif %}
+    {% if FEED_ALL_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Full Atom Feed" />
+    {% endif %}
+    {% if FEED_ALL_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Full RSS Feed" />
+    {% endif %}
+    {% if FEED_ATOM %}
+    <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Atom Feed" />
+    {% endif %}
+    {% if FEED_RSS %}
+    <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} RSS Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_ATOM and category %}
+    <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories Atom Feed" />
+    {% endif %}
+    {% if CATEGORY_FEED_RSS and category %}
+    <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Categories RSS Feed" />
+    {% endif %}
+    {% if TAG_FEED_ATOM and tag %}
+    <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags Atom Feed" />
+    {% endif %}
+    {% if TAG_FEED_RSS and tag %}
+    <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME|striptags }} Tags RSS Feed" />
+    {% endif %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    {% endblock head %}
+</head>
+
+<body>
+  <header>
+    {% block body_header %}
+    <section class="section">
+      <div class="container">
+        <nav class="nav">
+          <div class="nav-left">
+            <h1 class="nav-item title is-4">
+              <a href="{{ SITEURL }}/" rel="home">
+                <img src="{{ logo_url }}" alt="{{ SITENAME }}" id="logo">
+                <span id="blog-title">{{ SITESUBTITLE }}</span>
+              </a>
+            </h1>
+          </div>
+          <div class="nav-right">
+            <nav class="nav-item level is-mobile">
+              {% for link, title, icon in MENUITEMS %}
+              <a class="level-item" href="{{ link }}" title="{{ title }}">
+                <span class="icon">
+                  <i class="{{ icon }}"></i>
+                </span>
+              </a>
+              {% endfor %}
+            </nav>
+          </div>
+        </nav>
+      </div>
+    </section>
+    {% endblock %}
+  </header>
+  <main>
+    <section class="section">
+      <div class="container" id="content">
+        {% block content %}
+        {% endblock %}
+      </div>
+    </section>
+  </main>
+  <footer>
+  {% block footer %}
+    <section class="section">
+      <div class="container has-text-centered">
+        Contents &copy; {{ COPYRIGHT_DATE }} <a href="mailto:{{ EMAIL }}">{{ AUTHOR }}</a> - Powered by <a href="http://getpelican.com/" rel="nofollow">Pelican</a>
+      </div>
+    </section>
+  {% endblock %}
+  </footer>
+</body>

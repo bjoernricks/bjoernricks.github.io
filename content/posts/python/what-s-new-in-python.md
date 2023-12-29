@@ -1,13 +1,10 @@
 ---
-category: python
+title: What's new in Python 3
 date: 2023-11-10 09:58:50 UTC
-description: Quick overview about the most important additions in a Python release
-link: ''
+modified: 2023-12-22 7:00:00 UTC
 slug: what-s-new-in-python
 tags: python,news,features
-title: What's new in Python 3
 type: text
-updated: 2023-12-22 7:00:00 UTC
 ---
 Quick overview about the most important additions in a Python release
 

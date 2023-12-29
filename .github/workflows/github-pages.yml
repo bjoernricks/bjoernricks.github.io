@@ -37,13 +37,13 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install --no-root
-      - name: Build Documentation
+      - name: Build
         run: |
-          cd content && poetry run nikola build
+          poetry run pelican content -s publishconf.py -t themes/hemingway-jinja -d
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "content/output/"
+          path: "output/"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
