@@ -1,7 +1,5 @@
 from datetime import date
 
-import pelican.plugins.markdown_it
-
 AUTHOR = "Björn Ricks"
 SITENAME = "Björn Ricks"
 SITEURL = ""
@@ -70,9 +68,6 @@ def debug(value: str) -> str:
 JINJA_FILTERS = {"debug": debug}
 JINJA_GLOBALS = {"enumerate": enumerate}
 
-# PLUGINS = [pelican.plugins.markdown_it]
-
-# MARKDOWN_IT_PRESET_TYPE = "commonmark"
 from mdit_toc import toc_plugin
 from pelican.plugins.markdown_it import DEFAULT_MARKDOWN_IT_PLUGINS
 

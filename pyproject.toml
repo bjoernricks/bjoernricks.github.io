@@ -4,12 +4,18 @@ version = "1.0.0"
 description = ""
 authors = ["Björn Ricks <bjoern.ricks@gmail.com>"]
 readme = "README.md"
+packages = [
+  { include = "pelican/plugins/markdown_it" },
+  { include = "pelican/plugins/teaser" },
+  { include = "mdit_toc" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 pelican = {extras = ["markdown"], version = ">=4.9.1"}
 markdown-it-py = "^3.0.0"
 mdit-py-plugins = "^0.4.0"
+pyyaml = "^6.0.1"
 
 [tool.poetry.group.dev.dependencies]
 autohooks-plugin-black = ">=22.11.0"
