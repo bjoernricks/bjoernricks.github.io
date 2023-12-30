@@ -40,6 +40,13 @@ ARTICLE_PATHS = ["posts"]
 ARTICLE_URL = "posts/{category}/{slug}/"
 ARTICLE_SAVE_AS = "posts/{category}/{slug}/index.html"
 
+PAGE_URL = "pages/{slug}/"
+PAGE_SAVE_AS = "pages/{slug}/index.html"
+
+CATEGORIES_SAVE_AS = "categories/index.html"
+CATEGORY_URL = "categories/{slug}/"
+CATEGORY_SAVE_AS = "categories/{slug}/index.html"
+
 STYLESHEET_URL = "/theme/css/style.css"
 
 FEED_DOMAIN = SITEURL
