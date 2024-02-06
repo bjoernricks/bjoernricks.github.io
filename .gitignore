@@ -114,3 +114,6 @@ content/cache
 content/output
 content/*.db
 output/
+
+# don't allow to add next link of the week post
+content/posts/links-of-the-week/next.md
