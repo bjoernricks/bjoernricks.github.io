@@ -75,7 +75,7 @@ def debug(value: str) -> str:
 JINJA_FILTERS = {"debug": debug}
 JINJA_GLOBALS = {"enumerate": enumerate}
 
-from mdit_toc import toc_plugin
+from mdit_py_toc import toc_plugin
 from pelican.plugins.markdown_it import DEFAULT_MARKDOWN_IT_PLUGINS
 
 MARKDOWN_IT_PLUGINS = [
