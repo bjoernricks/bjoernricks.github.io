@@ -11,6 +11,8 @@ from Python's standard library. It comes with Python and is sufficient for most
 projects. But with quite big XML documents (> 1 GiB) parsing becomes slow
 and [lxml.etree][lxml] shines.
 
+<!-- TEASER_END -->
+
 While exchanging some code using [xml.etree.ElementTree][stdlib] to [lxml] I've
 found some slightly differences in their implementation despite sharing the same
 API.
