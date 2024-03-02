@@ -30,8 +30,9 @@ nice people and joined [Intevation] to work on free software full time.
 Being a C/C++ and Java developer before (and some Basic, Pascal and Delphi as a
 teenager), at [Intevation] I've started to work with Python (if I remember
 correctly it was Python 2.5 at that time). While not having interfaces or
-definitions Python felt a bit strange to me first but I began to like it very
-much because you can write code very fast and easily. Shortly after Python
+types definitions, Python felt a bit strange to me first but I began to like it
+very much. Python allows to write code very fast and easily with *batteries
+included*. Shortly after Python
 became my favorite programming language which it is still today.
 
 For example my current (pet) projects [autohooks](https://github.com/greenbone/autohooks)
@@ -46,7 +47,7 @@ known as OpenVAS.
 
 At Greenbone I've been working in several roles already. From a JavaScript
 developer responsible for the [React] based Greenbone Security Assistant Web UI,
-to a team lead and manager, through a product owner, I am in a software
+to a team lead, unit manager and product owner. Currently I am in a software
 developer role again working on DevOps topics.
 
 Because I care a lot about communities and free software/open source I always
