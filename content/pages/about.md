@@ -30,7 +30,7 @@ nice people and joined [Intevation] to work on free software full time.
 Being a C/C++ and Java developer before (and some Basic, Pascal and Delphi as a
 teenager), at [Intevation] I've started to work with Python (if I remember
 correctly it was Python 2.5 at that time). While not having interfaces or
-types definitions, Python felt a bit strange to me first but I began to like it
+type definitions, Python felt a bit strange to me first but I began to like it
 very much. Python allows to write code very fast and easily with *batteries
 included*. Shortly after Python
 became my favorite programming language which it is still today.
