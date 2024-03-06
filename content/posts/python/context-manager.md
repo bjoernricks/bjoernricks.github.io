@@ -13,6 +13,8 @@ how to use it.
 
 [TOC]
 
+<!-- TEASER_END -->
+
 # Origins
 
 When using resources like files, memory, network connections, it is
